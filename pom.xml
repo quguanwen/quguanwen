@@ -12,6 +12,16 @@
     <modules>
         <module>eureka-server</module>
         <module>eureka-client-provider</module>
+        <module>eureka-client-consumer</module>
+        <module>eureka-client-consumer-ribbon</module>
+        <module>eureka-client-consumer-feign</module>
+        <module>eureka-feign-upload-server</module>
+        <module>eureka-feign-upload-client</module>
+        <module>spring-config-server-git</module>
+        <module>client-config</module>
+        <module>eureka-client-ribbon-hystrix</module>
+        <module>hystrix-dashboard</module>
+        <module>api-gateway</module>
     </modules>
 
 </project>

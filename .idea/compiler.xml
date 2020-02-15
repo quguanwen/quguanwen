@@ -6,9 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka-client-ribbon-hystrix" />
         <module name="eureka-server" />
+        <module name="eureka-client-consumer" />
         <module name="springcloud-producer-8763" />
+        <module name="eureka-feign-upload-server" />
+        <module name="eureka-feign-upload-client" />
+        <module name="hystrix-dashboard" />
+        <module name="eureka-client-consumer-feign" />
+        <module name="spring-config-server-git" />
         <module name="eureka-client-provider" />
+        <module name="client-config" />
+        <module name="api-gateway" />
+        <module name="eureka-client-consumer-ribbon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

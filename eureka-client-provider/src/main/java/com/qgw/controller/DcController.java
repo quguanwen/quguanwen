@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @Slf4j
 public class DcController {
@@ -14,7 +15,8 @@ public class DcController {
     DiscoveryClient discoveryClient;
 
     @GetMapping("/dc")
-    public String dc() {
+    public String dc() throws InterruptedException {
+//        Thread.sleep(5000L);
 //        discoveryClient屏蔽了实现,不管是eureka还是consul都没问题
         String services = "Services: " + discoveryClient.getServices();
         log.info("{}", services);

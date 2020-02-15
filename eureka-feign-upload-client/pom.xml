@@ -5,14 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.qgw</groupId>
-    <artifactId>eureka-client-provider</artifactId>
+    <artifactId>eureka-feign-upload-client</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>eureka-client-provider</name>
+    <name>eureka-feign-upload-client</name>
     <description>Spring Cloud In Action</description>
 
-    <!--指定父工程为springboot默认的-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -20,28 +19,44 @@
         <relativePath/>
     </parent>
 
-    <!--指定构建编码方式,和版本号-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-        <!--引入eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!--监控服务可用性-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--feign上传文件插件-->
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form-spring</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.3</version>
         </dependency>
 
 
@@ -76,7 +91,6 @@
     </dependencies>
 
 
-    <!--引入springcloud版本为D-->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -89,7 +103,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--构建插件使用maven-->
     <build>
         <plugins>
             <plugin>

@@ -5,14 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.qgw</groupId>
-    <artifactId>eureka-client-provider</artifactId>
+    <artifactId>spring-config-server-git</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>eureka-client-provider</name>
+    <name>spring-config-server-git</name>
     <description>Spring Cloud In Action</description>
 
-    <!--指定父工程为springboot默认的-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -20,37 +19,21 @@
         <relativePath/>
     </parent>
 
-    <!--指定构建编码方式,和版本号-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
 
+    <!--分布式配置中心服务端依赖-->
     <dependencies>
-        <!--引入eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--监控服务可用性-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-            <version>1.18.4</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-security</artifactId>-->
+        <!--</dependency>-->
 
         <!--JDK不兼容导致问题-->
         <dependency>
@@ -75,8 +58,6 @@
         </dependency>
     </dependencies>
 
-
-    <!--引入springcloud版本为D-->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -89,7 +70,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--构建插件使用maven-->
     <build>
         <plugins>
             <plugin>

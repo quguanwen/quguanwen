@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: client-config
+  cloud:
+    config:
+      #指定config server中心
+      uri: http://localhost:1201/
+      #配置对应环境
+      profile: default
+      #git的分支
+      label: master
+
+server:
+  port: 2001
