@@ -3,7 +3,7 @@ package com.qgw;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-//新增注释new11
+//新增注释new111
 @EnableHystrixDashboard
 @SpringCloudApplication
 public class Application {
